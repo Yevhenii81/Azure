@@ -5,12 +5,12 @@ class Program
 {
     static async Task Main(string[] args)
     {
-        var visionKey = "4vfISrjT82gVt7OIVOKHfqb68lQ4CdImg9gXN09GFS3Kf7AymGNoJQQJ99BKACYeBjFXJ3w3AAAFACOGBc3G";
-        var visionEndpoint = "https://imagetranslator.cognitiveservices.azure.com/";
+        var visionKey = "";
+        var visionEndpoint = "";
 
-        var translatorKey = "3EJywuhTVyJEDNDcjZM3WSruMrUoV9NhwsxaYAJLscMli7zQbnpkJQQJ99BKACYeBjFXJ3w3AAAbACOGxqhh";
-        var region = "eastus";
-        var translatorEndpoint = "https://api.cognitive.microsofttranslator.com/";
+        var translatorKey = "";
+        var region = "";
+        var translatorEndpoint = "";
 
         var ocr = new OcrService(visionEndpoint, visionKey);
         var translator = new TranslatorService(translatorKey, region, translatorEndpoint);
@@ -43,3 +43,4 @@ class Program
         Console.ReadLine();
     }
 }
+
