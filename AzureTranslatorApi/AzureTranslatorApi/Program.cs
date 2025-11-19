@@ -5,23 +5,24 @@ class Program
 {
     static async Task Main()
     {
-        var key = "3EJywuhTVyJEDNDcjZM3WSruMrUoV9NhwsxaYAJLscMli7zQbnpkJQQJ99BKACYeBjFXJ3w3AAAbACOGxqhh";
-        var endpoint = "https://yevheniitranslator.cognitiveservices.azure.com/";
+        var key = "";
+        var endpoint = "";
         var region = "eastus";
 
         var translator = new TranslatorService(key, endpoint, region);
 
         while (true)
         {
-            Console.Write("Введите текст для перевода (или 'exit' для выхода):\n> ");
+            Console.Write("Г‚ГўГҐГ¤ГЁГІГҐ ГІГҐГЄГ±ГІ Г¤Г«Гї ГЇГҐГ°ГҐГўГ®Г¤Г  (ГЁГ«ГЁ 'exit' Г¤Г«Гї ГўГ»ГµГ®Г¤Г ):\n> ");
             var text = Console.ReadLine();
             if (text.ToLower() == "exit") break;
 
-            Console.Write("Введите язык перевода (например, 'en' или 'fr'):\n> ");
+            Console.Write("Г‚ГўГҐГ¤ГЁГІГҐ ГїГ§Г»ГЄ ГЇГҐГ°ГҐГўГ®Г¤Г  (Г­Г ГЇГ°ГЁГ¬ГҐГ°, 'en' ГЁГ«ГЁ 'fr'):\n> ");
             var lang = Console.ReadLine();
 
             var translation = await translator.TranslateTextAsync(text, lang);
-            Console.WriteLine($"Перевод: {translation}\n");
+            Console.WriteLine($"ГЏГҐГ°ГҐГўГ®Г¤: {translation}\n");
         }
     }
 }
+
