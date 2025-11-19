@@ -34,8 +34,8 @@ public class OcrService
 
         var lines = read.Blocks
             .SelectMany(block => block.Lines)
-            .Select(line => line.Text);  // <-- вместо Content используем Text
-
+            .Select(line => line.Text); 
         return string.Join(Environment.NewLine, lines);
     }
 }
+
