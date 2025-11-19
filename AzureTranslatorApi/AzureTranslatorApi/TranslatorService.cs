@@ -21,10 +21,8 @@ public class TranslatorService
         _client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Region", _region);
     }
 
-    // Вот этот метод и делает перевод
     public async Task<string> TranslateTextAsync(string text, string toLanguage)
     {
-        // Обрати внимание на правильный путь
         var route = $"/translator/text/v3.0/translate?to={toLanguage}";
         var requestBody = new object[] { new { Text = text } };
         var content = new StringContent(JsonSerializer.Serialize(requestBody), Encoding.UTF8, "application/json");
@@ -40,3 +38,4 @@ public class TranslatorService
         return translation;
     }
 }
+
